@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.0</version>
-    <date>2019-02-20T19:21:01Z</date>
+    <date>2019-08-04T15:42:12Z</date>
     <groups>
         <group>
             <name>Templates/Applications</name>
@@ -914,7 +914,7 @@
                         </item_prototype>
                         <item_prototype>
                             <name>PHP-FPM Pool {#POOLNAME} status page</name>
-                            <type>19</type>
+                            <type>0</type>
                             <snmp_community/>
                             <snmp_oid/>
                             <key>php-fpm.status[{#POOLNAME}]</key>
@@ -952,11 +952,11 @@
                             <preprocessing/>
                             <jmx_endpoint/>
                             <timeout>3s</timeout>
-                            <url>{$PROTO}://{$HOST.PHPFPM}/fpm-status_{#POOLNAME}?json</url>
+                            <url/>
                             <query_fields/>
                             <posts/>
-                            <status_codes>200</status_codes>
-                            <follow_redirects>0</follow_redirects>
+                            <status_codes/>
+                            <follow_redirects>1</follow_redirects>
                             <post_type>0</post_type>
                             <http_proxy/>
                             <headers/>
@@ -1249,16 +1249,7 @@
                 </discovery_rule>
             </discovery_rules>
             <httptests/>
-            <macros>
-                <macro>
-                    <macro>{$HOST.PHPFPM}</macro>
-                    <value>127.0.0.1:8080</value>
-                </macro>
-                <macro>
-                    <macro>{$PROTO}</macro>
-                    <value>http</value>
-                </macro>
-            </macros>
+            <macros/>
             <templates/>
             <screens/>
         </template>
